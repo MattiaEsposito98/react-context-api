@@ -35,7 +35,7 @@ export default function Index() {
         <div className="container">
           <div className="row">
             <ul className='grid grid-cols-2'>
-              {posts.filter(post => post.published)
+              {posts.filter(post => post.published === true)
                 .map(post => (
                   <li key={post.id}>
                     <Card
@@ -56,3 +56,4 @@ export default function Index() {
   )
 
 }
+

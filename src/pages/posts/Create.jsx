@@ -57,6 +57,7 @@ export default function Create() {
 
     const body = {
       ...formData,
+      published: formData.published || true,
       tags: formData.tags.split(',').map(tag => tag.trim()),
     }
 
