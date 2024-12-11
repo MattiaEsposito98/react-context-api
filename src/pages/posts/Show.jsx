@@ -33,12 +33,9 @@ export default function Show() {
           <div className="container-id">
             <h1 className="title">{post.title}</h1>
             <figure className='figure-id'>
-              {/* <img src={post.image ? `${BASE_URI}${post.image}` : ImgNotFound} /> */}
-              {/* <img src={`${BASE_URI}${post.image}` || post.image} alt="" /> */}
               <img
                 src={post.image.startsWith('http://') || post.image.startsWith('https://')
-                  ? post.image : `${BASE_URI}${post.image || ImgNotFound}`} /> {/* startsWith Controlla se il link inizia con la stringa passata */}
-
+                  ? post.image : `${BASE_URI}${post.image || ImgNotFound}`} />  {/* startsWith Controlla se il link inizia con la stringa passata */}
             </figure>
             <p>{post.content}</p>
           </div>

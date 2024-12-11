@@ -1,26 +1,13 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { BASE_URI } from "../config";
-import { Link } from "react-router-dom";
+import { useContext, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import GlobalContext from '../context/GlobalContext'
 
 export default function List() {
-  const [posts, setPosts] = useState([]);
-
-
-  function fetchPosts() {
-    axios
-      .get(`${BASE_URI}/posts`)
-      .then((res) => {
-        setPosts(res.data.results);
-      })
-      .catch((err) => {
-        console.error("Errore durante il fetch dei post:", err);
-      });
-  }
+  const { posts, fetchPosts } = useContext(GlobalContext)
 
   useEffect(() => {
-    fetchPosts();
-  }, []);
+    fetchPosts();  // Recupera i post
+  }, [])
 
   return (
     <div>
@@ -41,7 +28,7 @@ export default function List() {
       {/* Link per creare un nuovo post */}
       <div className="create-post">
         <Link className="link-homepage" to="/posts/create">
-          <button className='link-create'> Crea un nuovo post </button>
+          <button className='link-create'>Crea un nuovo post</button>
         </Link>
       </div>
     </div>
