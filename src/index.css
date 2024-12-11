@@ -1,0 +1,150 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none
+}
+
+body {
+  margin: 0;
+  /* display: flex; */
+  /* place-items: center; */
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/*  */
+.nav {
+  padding: 50px;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    gap: 1rem;
+  }
+
+}
+
+a:hover {
+  color: chartreuse;
+}
+
+.active {
+  color: green;
+}
+
+.namePost {
+  margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.blank-layout {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+
+}
+
+.grid.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.title {
+  text-align: center;
+  margin: 2rem;
+  font-size: 40px;
+}
+
+.title-homepage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5rem;
+}
+
+.link-homepage {
+  font-size: 30px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container-id {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-show {
+  background-color: cadetblue;
+  padding: 12px;
+  border-radius: 12%;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+input:not([type='checkbox'], [type='radio']) {
+  height: 2rem;
+  border: 1px solid #740e0e99;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.form-group-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+input[type='checkbox'] {
+  height: 2rem;
+  margin: 0.5rem 0;
+}
+
+form button {
+  margin: 1rem 0;
+}
+
+.link-create {
+  background-color: cadetblue;
+  padding: 12px;
+  margin-left: 2rem;
+  margin: 1rem;
+}
