@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: bisque;
+}
+
 ul,
 ol {
   list-style: none
@@ -12,8 +16,6 @@ ol {
 
 body {
   margin: 0;
-  /* display: flex; */
-  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -139,7 +141,12 @@ input[type='checkbox'] {
 }
 
 form button {
-  margin: 1rem 0;
+  text-align: center;
+  background-color: cadetblue;
+  padding: 12px;
+  border-radius: 12%;
+  margin-left: 50%;
+  margin-top: 1rem;
 }
 
 .link-create {
@@ -147,4 +154,22 @@ form button {
   padding: 12px;
   margin-left: 2rem;
   margin: 1rem;
+}
+
+.list-posts {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn-delete {
+  background-color: red;
+  color: white;
+  line-height: 2rem;
+  padding: 0 1rem;
+  text-align: center;
+  cursor: pointer;
+  width: 7rem;
 }

@@ -12,6 +12,7 @@ export default function Index() {
     fetchPosts()
   }, [])
 
+
   return (
     <main>
       <section>

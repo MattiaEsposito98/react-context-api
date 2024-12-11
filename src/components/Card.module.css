@@ -44,6 +44,7 @@
   padding: 0 1rem;
   text-align: center;
   cursor: pointer;
+  width: 7rem;
 }
 
 .html {
@@ -64,4 +65,9 @@
 
 .span {
   padding: 3px;
+}
+
+.buttons_cards {
+  display: flex;
+  justify-content: space-between;
 }

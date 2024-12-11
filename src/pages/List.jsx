@@ -10,7 +10,7 @@ export default function List() {
   }, [])
 
   return (
-    <div>
+    <div className='list-posts'>
       <h1>Lista dei Post</h1>
       {/* Controlla se ci sono post */}
       {posts.length > 0 ? (
