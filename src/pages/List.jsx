@@ -6,7 +6,7 @@ export default function List() {
   const { posts, fetchPosts } = useContext(GlobalContext)
 
   useEffect(() => {
-    fetchPosts();  // Recupera i post
+    fetchPosts()  // Recupera i post
   }, [])
 
   return (

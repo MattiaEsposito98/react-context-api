@@ -1,22 +1,12 @@
 import axios from "axios"
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { BASE_URI } from '../../config'
 import { Link } from 'react-router-dom'
 import Card from "../../components/Cards"
+import GlobalContext from "../../context/GlobalContext"
 
 export default function Index() {
-  const [posts, setPosts] = useState([])
-
-
-  function fetchPosts() {
-    axios.get(`${BASE_URI}/posts`)
-      .then(res => {
-        setPosts(res.data.results)
-      })
-      .catch(err => {
-        console.error(err)
-      })
-  }
+  const { posts, fetchPosts } = useContext(GlobalContext)
 
   useEffect(() => {
     fetchPosts()
@@ -39,6 +29,7 @@ export default function Index() {
                 .map(post => (
                   <li key={post.id}>
                     <Card
+                      id={post.id}
                       title={post.title}
                       tags={post.tag}
                       image={post.image}
